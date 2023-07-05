@@ -78,9 +78,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
         <section id="question">
             <h1>QUESTIONS</h1>
             <p></p>
-        
-        
-           Questions
+        </section>
     
 </body>
 </html>`;
