@@ -46,10 +46,11 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tell Me The Facts</title>
 </head>
 <body>
-    <header id="title">${title}</header>
+    <header id="title" class="text-[14px]">${title}</header>
         <section id="description">
             <h1> DESCRIPTION </h1>
             <p>${description}</p>
