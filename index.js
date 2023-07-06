@@ -1,10 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const file = require('fs');
+const file = require('fs').promises;
 
 // TODO: Create an array of questions for user input
+
 const questions = () => {
-  return inquirer.createPromptModule([
+  return inquirer.prompt([
     {
       type: 'input',
       name: 'title',
@@ -86,7 +87,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
 // TODO: Create a function to initialize app
 const initialize = () => {
   questions()
-    .then((responses) => writeFile('index.html', generateHTML(responses)))
+    .then((responses) => file.writeFile('index.html', writeToFile(responses)))
     .then(() => console.log('correct'))
     .catch((err) => console.error(err));
 };
