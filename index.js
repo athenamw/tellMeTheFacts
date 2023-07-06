@@ -50,35 +50,35 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
     <title>Tell Me The Facts</title>
 </head>
 <body>
-    <header id="title" class="text-[14px]">${title}</header>
-        <section id="description">
-            <h1> DESCRIPTION </h1>
+    <header id="title" class="text-7xl text-center">${title}</header>
+        <section id="description" class="content-between">
+            <h1 class="text-4xl"> DESCRIPTION </h1>
             <p>${description}</p>
         </section>
         <section id="toc">
-            <h1> TABLE OF CONTENTS </h1>
+            <h1 class="text-4xl"> TABLE OF CONTENTS </h1>
         </section>
         <section id="installation>
-            <h1> INSTALLATION </h1>
+            <h1 class="text-4xl"> INSTALLATION </h1>
             <p>${installation}</p>
         <section id="usage">
-            <h1>USAGE</h1>
+            <h1 class="text-4xl">USAGE</h1>
             <p>${usage}</p>
         </section>
         <section id="license">
-            <h1>LICENSE</h1>
+            <h1 class="text-4xl">LICENSE</h1>
             <p></p>
         </section>
         <section id="contribute">
-            <h1>CONTRIBUTING</h1>
+            <h1 class="text-4xl">CONTRIBUTING</h1>
             <p>${contributions}</p>
         </section>
         <section id="tests">
-            <h1>TESTS</h1>
+            <h1 class="text-4xl">TESTS</h1>
             <p>${test}</p>
         </section>
         <section id="question">
-            <h1>QUESTIONS</h1>
+            <h1 class="text-4xl">QUESTIONS</h1>
             <p></p>
         </section>
     
