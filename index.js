@@ -59,12 +59,12 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
             <h1 class="text-4xl"> TABLE OF CONTENTS </h1>
             <ol>
             <li><a href="#description">Description</a></li>
-            <li>Installation</li>
-            <li>Usage</li>
-            <li>License</li>
-            <li>Contributing</li>
-            <li>Tests</li>
-            <li>Questions</li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage<a/></li>
+            <li><a href="#license">License</a></li>
+            <li><a href="#contribute">Contributing</a></li>
+            <li><a href="#tests">Tests</a></li>
+            <li><a href="#question"><Questions></a></li>
             </ol>
         </section>
         <section id="installation">
@@ -98,7 +98,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
 const initialize = () => {
   questions()
     .then((responses) => file.writeFile('index.html', writeToFile(responses)))
-    .then(() => console.log('correct'))
+    .then(() => console.log('File Generated Successfully!'))
     .catch((err) => console.error(err));
 };
 
