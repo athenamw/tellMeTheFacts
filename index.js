@@ -57,6 +57,15 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
         </section>
         <section id="toc">
             <h1 class="text-4xl"> TABLE OF CONTENTS </h1>
+            <ol>
+            <li><a href="#description">Description</a></li>
+            <li>Installation</li>
+            <li>Usage</li>
+            <li>License</li>
+            <li>Contributing</li>
+            <li>Tests</li>
+            <li>Questions</li>
+            </ol>
         </section>
         <section id="installation>
             <h1 class="text-4xl"> INSTALLATION </h1>
