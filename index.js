@@ -67,7 +67,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
             <li>Questions</li>
             </ol>
         </section>
-        <section id="installation>
+        <section id="installation">
             <h1 class="text-4xl"> INSTALLATION </h1>
             <p>${installation}</p>
         <section id="usage">
