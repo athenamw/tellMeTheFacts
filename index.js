@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const file = require('fs').promises;
+import { generateMarkdown, renderLicenseBadge } from './utils/generateMarkdowns.js';
+let licenceBadge = renderLicenseBadge(licence);
+// markdown = require('./utils/generateMarkdowns.js');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -29,7 +32,7 @@ const questions = () => {
       type: 'checkbox',
       name: 'license',
       message: 'Please choose a license type.',
-      choices: [, 'afl-3.0', 'MIT', 'apache-2.0', 'artistic-2.0'],
+      choices: [, 'Gnu GPL v3', 'MIT', 'apache-2.0', 'artistic-2.0'],
     },
     {
       type: 'input',
@@ -41,11 +44,22 @@ const questions = () => {
       name: 'test',
       message: 'Please list test instructions.',
     },
+    {
+      type: 'input',
+      name: 'GitHub username',
+      message: 'What is your GitHub username?',
+    },
+    { type: 'input', name: 'profile link', message: 'What is your GitHub profile link?' },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Please enter an email address.',
+    },
   ]);
 };
 
 // TODO: Create a function to write README file
-const writeToFile = ({ title, description, installation, usage, contributions, test }) =>
+const writeToFile = ({ title, description, installation, usage, license, contributions, test }) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +70,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
 </head>
 <body>
     <header id="title" class="text-7xl text-center">${title}</header>
+    <img src="${licenseBadge(license)}">
         <section id="description" class="content-between">
             <h1 class="text-4xl"> DESCRIPTION </h1>
             <p>${description}</p>

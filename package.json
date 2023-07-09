@@ -11,5 +11,6 @@
     "dependencies": {
         "@inquirer/checkbox": "^1.3.3",
         "inquirer": "^8.2.4"
-    }
+    },
+    "type": "module"
 }
