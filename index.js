@@ -23,7 +23,7 @@ const questions = () => {
       type: 'input',
       name: 'description',
       message: 'Please describe your project.',
-      validate: titleInput => {
+      validate: descriptionInput => {
         if (descriptionInput){
           return true;
         }else{
@@ -60,10 +60,12 @@ const questions = () => {
     },
     {
       type: 'input',
-      name: 'GitHub username',
+      name: 'username',
       message: 'What is your GitHub username?',
     },
-    { type: 'input', name: 'profile link', message: 'What is your GitHub profile link?' },
+    { type: 'input',
+      name: 'profileLink', 
+      message: 'What is your GitHub profile link?' },
     {
       type: 'input',
       name: 'email',
