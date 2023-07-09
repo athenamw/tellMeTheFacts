@@ -3,7 +3,6 @@ const inquirer = require('inquirer');
 const file = require('fs').promises;
 
 // TODO: Create an array of questions for user input
-
 const questions = () => {
   return inquirer.prompt([
     {
@@ -25,6 +24,12 @@ const questions = () => {
       type: 'input',
       name: 'usage',
       message: 'Please describe the usages for this project.',
+    },
+    {
+      type: 'checkbox',
+      name: 'license',
+      message: 'Please choose a license type.',
+      choices: [, 'afl-3.0', 'MIT', 'apache-2.0', 'artistic-2.0'],
     },
     {
       type: 'input',
@@ -76,7 +81,7 @@ const writeToFile = ({ title, description, installation, usage, contributions, t
         </section>
         <section id="license">
             <h1 class="text-4xl">LICENSE</h1>
-            <p></p>
+            <p>${license}</p>
         </section>
         <section id="contribute">
             <h1 class="text-4xl">CONTRIBUTING</h1>
