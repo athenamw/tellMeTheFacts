@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
   } else if (license == 'MIT') {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   } else if (license == 'apache-2.0') {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    return `[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
   } else if (license == 'artistic-2.0') {
     return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`;
   } else if (license.length === 0) {
@@ -36,7 +36,7 @@ function renderLicenseSection(license) {
   if (license.length === 0) {
     return '';
   } else {
-    return `## License
+    return `
     ${renderLicenseBadge(license)}
     ${renderLicenseLink(license)}`;
   }
@@ -45,13 +45,14 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
   ${renderLicenseBadge(data.license)}
 
-  ##Description
+  ## Description
 
   ${data.description}
 
-  ##Table of Contents
+  ## Table of Contents
 
   1. [Description](#description)
   2. [Installation](#installation)
@@ -61,30 +62,30 @@ function generateMarkdown(data) {
   6. [Tests](#tests)
   7. [Questions](#question)
 
-  ##Installation
+  ## Installation
 
   ${data.installation}
 
-  ##Usage
+  ## Usage
 
   ${data.usage}
 
-  ##License
+  ## License
 
-  ${renderLicenseSection(data.license)}
+  ${data.title} uses a ${data.license} license. Please review information about this [here](${renderLicenseLink(data.license)}).
 
-  ##Contributing
+  ## Contributing
 
-  ${data.contribute}
+  ${data.contributions}
 
-  ##Tests
-  ${data.tests}
+  ## Tests
+  ${data.test}
 
-  ##Questions
+  ## Questions
 
   With questions please contact me at:
   GitHub: [${data.username}](${data.profileLink})
-  Email: ${data.em}
+  [Email](mailto:${data.email})
 `;
 }
 
