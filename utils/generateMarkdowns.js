@@ -83,8 +83,8 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  With questions please contact me at:
-  GitHub: [${data.username}](${data.profileLink})
+  With questions please contact me at:  
+  GitHub: [${data.username}](https://github.com/${data.username})  
   [Email](mailto:${data.email})
 `;
 }
