@@ -21,6 +21,7 @@ There are no installation instructions. However, when selecting the license the 
 ## Usage
 
 This project is used for developers to generate a professional README efficiently.
+A video walkthrough: https://drive.google.com/file/d/1Nzz7JO5ZypDchCold99gFZ6cyjNPvuka/view
 
 ## License
 

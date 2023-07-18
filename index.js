@@ -49,7 +49,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'contributions',
+    name: 'contributing',
     message: 'Please describe contribution guidelines.',
   },
   {
@@ -59,7 +59,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'username',
+    name: 'questions',
     message: 'What is your GitHub username?',
   },
   {
